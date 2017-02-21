@@ -1,5 +1,0 @@
-library (a) {
-  cell (b:c) {  /* colon in cellname */
-    area : 10*5;
-  }
-}
