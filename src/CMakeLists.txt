@@ -4,6 +4,10 @@ list(REMOVE_ITEM LIB_SOURCES "main.c")
 message(${LIB_SOURCES})
 file(GLOB LIB_HEADERS "../include/*.h")
 
+SET(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+SET(BUILD_SHARED_LIBRARIES OFF)
+SET(CMAKE_EXE_LINKER_FLAGS "-static")
+
 add_library(si2dr_liberty ${LIB_SOURCES} ${LIB_HEADERS})
 target_include_directories(si2dr_liberty PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
